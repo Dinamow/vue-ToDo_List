@@ -1,12 +1,18 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
+  --vt-c-white: #2e8668;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
 
   --vt-c-black: #181818;
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
+
+  --vt-c-pink: #b717c5;
+  --vt-c-pink-soft: #e070ff;
+  --vt-c-pink-mute: #f0b5ff;
+  --vt-c-pink-dark: #800080;
+  --vt-c-pink-light: #ffb6c1;
 
   --vt-c-indigo: #2c3e50;
 
@@ -38,9 +44,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
+    --color-background: var(--vt-c-pink-mute);
+    --color-background-soft: var(--vt-c-pink-light);
+    --color-background-mute: var(--vt-c-pink-dark);
 
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
@@ -54,12 +60,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   font-weight: normal;
 }
 
 body {
-  min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition:
