@@ -1,43 +1,57 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import days from './components/DaysList.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="container">
+    <header>
+      <img alt="Vue logo" class="logo" src="./assets/حمبوله.jpg" width="125" height="125" />
+      <div class="wrapper">
+        <HelloWorld msg="Good evening! Abdo" />
+      </div>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <main>
+      <days />
+    </main>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2025 DINAMOW</p>
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+img {
+  border-radius: 50%;
+}
+
+header {
+  line-height: 1.5;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   header .wrapper {
     display: flex;
     place-items: flex-start;
