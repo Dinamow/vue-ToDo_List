@@ -1,43 +1,59 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import days from './components/DaysList.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="container">
+    <header>
+      <img alt="Vue logo" class="logo" src="./assets/حمبوله.jpg" width="125" height="125" />
+      <div class="wrapper">
+        <HelloWorld msg="Good evening! Abdo" />
+      </div>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <main>
+      <days />
+    </main>
+  </div>
 </template>
 
 <style scoped>
+.container {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
 header {
-  line-height: 1.5;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: var(--spacing-xl);
+  color: white;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  border: 3px solid white;
+  box-shadow: var(--shadow);
+}
+
+main {
+  padding: var(--spacing-xl);
+}
+
+img {
+  border-radius: 50%;
+}
+
+header {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   header .wrapper {
     display: flex;
     place-items: flex-start;

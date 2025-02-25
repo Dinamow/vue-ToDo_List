@@ -3,14 +3,28 @@
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: var(--spacing-xl);
+  }
 }
 
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(0, 1, 1);
   transition: 0.4s;
   padding: 3px;
 }
@@ -23,13 +37,12 @@ a,
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
     place-items: center;
   }
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 0 2rem;
   }
 }
