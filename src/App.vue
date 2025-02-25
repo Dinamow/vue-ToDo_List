@@ -16,16 +16,29 @@ import days from './components/DaysList.vue'
       <days />
     </main>
   </div>
-  <footer>
-    <p>Copyright &copy; 2025 DINAMOW</p>
-  </footer>
 </template>
 
 <style scoped>
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: var(--spacing-xl);
+  color: white;
+}
+
+.logo {
+  border: 3px solid white;
+  box-shadow: var(--shadow);
+}
+
+main {
+  padding: var(--spacing-xl);
 }
 
 img {
@@ -34,21 +47,10 @@ img {
 
 header {
   line-height: 1.5;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-}
-
-main {
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (min-width: 1024px) {
