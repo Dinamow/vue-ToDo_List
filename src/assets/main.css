@@ -2,12 +2,23 @@
 
 #app {
   max-width: 1280px;
-  margin: 2rem;
-  padding: 2rem;
-  font-weight: normal;
-  color: rgb(0, 1, 1);
-  background-color: #b384c7;
-  border-radius: 15px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: var(--spacing-xl);
+  }
 }
 
 a,
@@ -26,13 +37,12 @@ a,
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
     place-items: center;
   }
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 0 2rem;
   }
 }
